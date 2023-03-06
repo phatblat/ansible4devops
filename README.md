@@ -1,3 +1,18 @@
+# Ansible 4 DevOps Examples
+
+## Setup
+
+### Start the VM
+
+```command
+vagrant up --provider=docker
+```
+
+### Connect into the VM
+
+```command
+vagrant ssh
+```
 
 ## 📄 License
 
