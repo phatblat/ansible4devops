@@ -1,6 +1,8 @@
 Vagrant.configure(2) do |config|
 
-# ... your existing config
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://vagrantcloud.com/search.
+  config.vm.box = "geerlingguy/rocklinux8"
 
   # Custom configuration for docker
   config.vm.provider "docker" do |docker, override|
@@ -18,7 +20,5 @@ Vagrant.configure(2) do |config|
     # Configure Docker to allow access to more resources
     docker.privileged = true
   end
-
-# ...
 
 end
