@@ -14,6 +14,7 @@
 .rubygems/
 .settings
 .swiftpm/
+.vagrant/
 .vs/
 .vscode/
 Carthage/
