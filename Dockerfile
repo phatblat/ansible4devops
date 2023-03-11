@@ -5,10 +5,28 @@
 
 FROM ubuntu:18.04
 ENV container docker
-RUN apt-get update -y && apt-get dist-upgrade -y
+
+RUN apt-get update -y && \
+    apt-get dist-upgrade -y
+
+# Generate locales to avoid
+# -bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+RUN apt-get install -y --no-install-recommends \
+    locales \
+    language-pack-en && \
+    export LANGUAGE=en_US.UTF-8 && \
+    export LANG=en_US.UTF-8 && \
+    export LC_ALL=en_US.UTF-8 && \
+    locale-gen en_US.UTF-8 && \
+    dpkg-reconfigure locales
 
 # Install system dependencies, you may not need all of these
-RUN apt-get install -y --no-install-recommends ssh sudo libffi-dev systemd openssh-client
+RUN apt-get install -y --no-install-recommends \
+    libffi-dev \
+    openssh-client \
+    ssh \
+    sudo \
+    systemd
 
 # Needed to run systemd
 # VOLUME [ "/sys/fs/cgroup" ]
