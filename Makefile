@@ -20,7 +20,7 @@ status: ## Displays the status of the vagrant box
 
 .PHONY: up
 up: ## Starts the vagrant box
-	vagrant up --provider=docker
+	time vagrant up --provider=docker
 
 .PHONY: down
 down: ## Stops the vagrant box

@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  become: yes
+  become: true
   tasks:
     - name: Ensure chrony (for time synchronization) is installed.
       yum:
