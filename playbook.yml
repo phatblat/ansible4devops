@@ -6,6 +6,7 @@
       yum:
         name: chrony
         state: present
+        use_backend: yum
 
     - name: Ensure chrony is running
       service:
