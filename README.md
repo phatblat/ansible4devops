@@ -8,10 +8,23 @@
 vagrant up --provider=docker
 ```
 
-### Connect into the VM
+Aliased to `make up`.
+
+### View Status
+
+```command
+vagrant status
+```
+
+Aliased to `make status`.
+
+### Connect into the VM/container
 
 ```command
 vagrant ssh
+
+# or direct
+ssh -p 2222 -l vagrant -i .ssh/ansible localhost
 ```
 
 ### Stop the VM
@@ -19,6 +32,8 @@ vagrant ssh
 ```command
 vagrant destroy --force
 ```
+
+Aliased to `make down`.
 
 ## 📄 License
 
