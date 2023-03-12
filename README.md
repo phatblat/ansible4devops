@@ -35,6 +35,14 @@ vagrant destroy --force
 
 Aliased to `make down`.
 
+### Ansible Playbook
+
+```command
+ansible-playbook playbooks/playbook.yml
+```
+
+Aliased to `make play`. This will fail if the VM is not running.
+
 ## 📄 License
 
 This repo is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for rights and limitations.
