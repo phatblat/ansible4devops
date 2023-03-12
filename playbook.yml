@@ -2,14 +2,13 @@
 - hosts: all
   become: true
   tasks:
-    - name: Ensure chrony (for time synchronization) is installed.
-      yum:
+    - name: Ensure chrony is installed.
+      apt:
         name: chrony
         state: present
-        use_backend: yum
 
     - name: Ensure chrony is running
       service:
         name: chronyd
         state: started
-        enabled: yes
+        enabled: true
