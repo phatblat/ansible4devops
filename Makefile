@@ -25,3 +25,7 @@ up: ## Starts the vagrant box
 .PHONY: down
 down: ## Stops the vagrant box
 	vagrant destroy --force
+
+.PHONY: play
+play: ## Plays the ansible playbook
+	ansible-playbook playbooks/playbook.yml
