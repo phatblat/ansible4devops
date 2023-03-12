@@ -1,9 +1,9 @@
 Vagrant.configure(2) do |config|
 
   # Provisioning configuration for Ansible.
-  config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "playbook.yml"
-  end
+  # config.vm.provision "ansible" do |ansible|
+  #   ansible.playbook = "playbook.yml"
+  # end
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
